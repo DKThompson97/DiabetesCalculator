@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Calculator : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Calculator : MonoBehaviour
 
     // Total together 
     private float GaF = 0f;
+
+    public GameObject totalValueText;
 
     // Get set for everything
     public float getCurrentGlucose { get { return CurrentGlucose; } set { CurrentGlucose = value; } }
@@ -76,6 +79,7 @@ public class Calculator : MonoBehaviour
         TotalGlucose = temp;
         // test
         Debug.Log(TotalGlucose.ToString());
+        totalValueText.GetComponent<Text>().text = $"You need {TotalGlucose} Units";
     }
 
     // Food calculation Only
