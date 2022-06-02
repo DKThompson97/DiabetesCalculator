@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class Calculator : MonoBehaviour
     // Total together 
     private float GaF = 0f;
 
-    public GameObject totalValueText;
+    public Text totalValueText;
 
     // Get set for everything
     public float getCurrentGlucose { get { return CurrentGlucose; } set { CurrentGlucose = value; } }
@@ -52,6 +53,8 @@ public class Calculator : MonoBehaviour
     public float RoundUnits(float _input)
     {
         float temp = 0f;
+        float temp2 = 0f;
+        float temp3 = 0f;
         if (_input <= .29f)
         {
             temp = 0f;
@@ -60,9 +63,17 @@ public class Calculator : MonoBehaviour
         {
             temp = .5f;
         }
-        if (_input >= .8f  )
+        if (_input >= .8f && _input <= 1 )
         {
             temp = 1.0f;
+        }
+        if (_input > 1)
+        {
+            temp2 = (int)Math.Truncate(_input);
+            Debug.Log(temp2.ToString());
+            temp3 = _input - temp2;
+            temp = RoundUnits(temp3);
+            temp += temp2;
         }
         
         Debug.Log(temp.ToString());
@@ -79,7 +90,7 @@ public class Calculator : MonoBehaviour
         TotalGlucose = temp;
         // test
         Debug.Log(TotalGlucose.ToString());
-        totalValueText.GetComponent<Text>().text = $"You need {TotalGlucose} Units";
+        totalValueText.text = $"You need {TotalGlucose} Units";
     }
 
     // Food calculation Only
@@ -90,6 +101,7 @@ public class Calculator : MonoBehaviour
         TotalCarb = temp;
         // test
         Debug.Log(TotalCarb.ToString());
+        totalValueText.text = $"You need {TotalCarb} Units";
     }
 
     // Food + Glucose Calculation
@@ -104,5 +116,6 @@ public class Calculator : MonoBehaviour
         total = tempC + tempG;
         total = RoundUnits(total);
         GaF = total;
+        totalValueText.text = $"You need {GaF} Units";
     }
 }
