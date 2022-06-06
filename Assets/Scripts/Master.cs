@@ -7,30 +7,60 @@ public class Master : MonoBehaviour
 {
     private float mCurrentGlucose = 0f;
     private float mCarbsToIngets = 0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float mGoalGlucose = 0f;
+    private float mSensitivityFactor = 0f;
+    private float mCarbControl = 0f;
 
-    // Update is called once per frame
-    void Update()
+    public float getGoalGlucose { get { return mGoalGlucose; } set { mGoalGlucose = value; } }
+    public float getSensitivityIndex { get { return mSensitivityFactor; } set { mSensitivityFactor = value; } }
+    public float getCarbControl { get { return mCarbControl; } set { mCarbControl = value; } }
+    public static Master Instance
     {
-        
+        get;
+        private set;
     }
-    public void readInputGlucose(string s)
+    void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+    }
+        // sets glucose input
+        public void readInputGlucose(string s)
+    {
+        Debug.Log(Calculator.Instance.getGoalGlucose.ToString());
+        Debug.Log(s);
         mCurrentGlucose = float.Parse(s);
         Calculator.Instance.getCurrentGlucose = mCurrentGlucose;
-        //test
-        Debug.Log(mCurrentGlucose.ToString());
     }
+    // sets carbs to ingest
     public void readInputCarbs(string s)
     {
         mCarbsToIngets = float.Parse(s);
         Calculator.Instance.getCarbsToIngest = mCarbsToIngets;
-        //test
-        Debug.Log(mCarbsToIngets.ToString());
     }
-    // change answer text
+    // sets Goal Glucose
+    public void setGoalGlucose(string s)
+    {
+        Debug.Log(s);
+        mGoalGlucose = float.Parse(s);
+        Calculator.Instance.getGoalGlucose = mGoalGlucose;
+        Debug.Log(mGoalGlucose.ToString());
+        Debug.Log(Calculator.Instance.getGoalGlucose.ToString());
     }
+    // sets Sensitivity Factor
+    public void SetSensitivityFactor(string s)
+    {
+        mSensitivityFactor = float.Parse(s);
+        Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
+    }
+    // sets Carb Control
+    public void SetCarbControl(string s)
+    {
+        mCarbControl = float.Parse(s);
+        Calculator.Instance.getCarbControl = mCarbControl;
+    }
+}

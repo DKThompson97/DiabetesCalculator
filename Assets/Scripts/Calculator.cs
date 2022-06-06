@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Calculator : MonoBehaviour
 {
+
     // Glucose calculation variables
     private float CurrentGlucose = 0f;
     private float GoalGlucose = 0f;
@@ -15,7 +16,7 @@ public class Calculator : MonoBehaviour
     // carb calculation variables
     private float CarbsToIngest = 0f;
     private float CarbControl = 0f;
-    private float TotalCarb;
+    private float TotalCarb = 0f;
 
     // Total together 
     private float GaF = 0f;
@@ -36,19 +37,19 @@ public class Calculator : MonoBehaviour
         get;
         private set;
     }
-    public void Start()
+    void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-            return;
-        }
-        Instance = this;
-        // test 
-        GoalGlucose = 120f;
-        SensitivityIndex = 200f;
-        CarbControl = 60f;
+       if (Instance != null && Instance != this)
+       {
+           Destroy(this);
+           return;
+       }
+       Instance = this;
+        GoalGlucose = SaveData.Instance.getGoalGlucose;
+        SensitivityIndex = SaveData.Instance.getSensitivityIndex;
+        CarbControl = SaveData.Instance.getCarbControl;
     }
+   
     // Rounding chart for rounding units. will change per person
     public float RoundUnits(float _input)
     {
