@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Master : MonoBehaviour
 {
-    private float mCurrentGlucose = 0f;
+    [SerializeField]private float mCurrentGlucose = 0f;
     private float mCarbsToIngets = 0f;
     private float mGoalGlucose = 0f;
     private float mSensitivityFactor = 0f;
@@ -31,8 +31,7 @@ public class Master : MonoBehaviour
         // sets glucose input
         public void readInputGlucose(string s)
     {
-        Debug.Log(Calculator.Instance.getGoalGlucose.ToString());
-        Debug.Log(s);
+      
         mCurrentGlucose = float.Parse(s);
         Calculator.Instance.getCurrentGlucose = mCurrentGlucose;
     }
@@ -47,20 +46,23 @@ public class Master : MonoBehaviour
     {
         Debug.Log(s);
         mGoalGlucose = float.Parse(s);
-        Calculator.Instance.getGoalGlucose = mGoalGlucose;
+        //Calculator.Instance.getGoalGlucose = mGoalGlucose;
+        SaveData.Instance.getGoalGlucose = mGoalGlucose;
         Debug.Log(mGoalGlucose.ToString());
-        Debug.Log(Calculator.Instance.getGoalGlucose.ToString());
+       
     }
     // sets Sensitivity Factor
     public void SetSensitivityFactor(string s)
     {
         mSensitivityFactor = float.Parse(s);
-        Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
+        //Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
+        SaveData.Instance.getSensitivityIndex = mSensitivityFactor;
     }
     // sets Carb Control
     public void SetCarbControl(string s)
     {
         mCarbControl = float.Parse(s);
-        Calculator.Instance.getCarbControl = mCarbControl;
+        //Calculator.Instance.getCarbControl = mCarbControl;
+        SaveData.Instance.getCarbControl = mCarbControl;
     }
 }

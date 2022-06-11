@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
-    private float Glucose = 0f;
-    private float Sensitivity = 0f;
-    private float Carb = 0f;
+    [SerializeField] private float Glucose = 0f;
+    [SerializeField] private float Sensitivity = 0f;
+    [SerializeField] private float Carb = 0f;
 
 
 
@@ -30,10 +30,10 @@ public class SaveData : MonoBehaviour
         }
         
     }
-    public void Update()
-    {
-        Glucose = Master.Instance.getGoalGlucose;
-        Carb = Master.Instance.getCarbControl;
-        Sensitivity = Master.Instance.getSensitivityIndex;
-    }
+    //public void Update()
+    //{
+    //    Glucose = Master.Instance.getGoalGlucose;
+    //    Carb = Master.Instance.getCarbControl;
+    //    Sensitivity = Master.Instance.getSensitivityIndex;
+    //}
 }

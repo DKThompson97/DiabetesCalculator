@@ -308,6 +308,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 710900502}
+        m_TargetAssemblyTypeName: SettingsScreenText, Assembly-CSharp
+        m_MethodName: CurrentSText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1199,6 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faf751be0da5ba4eaf1e8bcc03587d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mCurrentGlucose: 0
 --- !u!114 &710900502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,8 +1225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentGlucoseText: {fileID: 1405632025}
-  CurrentSensitivityText: {fileID: 0}
-  CurrentCarbText: {fileID: 0}
+  CurrentSensitivityText: {fileID: 1532177000}
+  CurrentCarbText: {fileID: 1732573417}
 --- !u!4 &710900503
 Transform:
   m_ObjectHideFlags: 0
@@ -1348,6 +1361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dd9049b5d1bf344a417464acf17a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Glucose: 0
+  Sensitivity: 0
+  Carb: 0
 --- !u!4 &1220905546
 Transform:
   m_ObjectHideFlags: 0
@@ -2559,6 +2575,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
         m_MethodName: SetCarbControl
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 710900502}
+        m_TargetAssemblyTypeName: SettingsScreenText, Assembly-CSharp
+        m_MethodName: CurrentCText
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

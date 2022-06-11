@@ -9,13 +9,13 @@ public class Calculator : MonoBehaviour
 
     // Glucose calculation variables
     private float CurrentGlucose = 0f;
-    private float GoalGlucose = 0f;
-    private float SensitivityIndex = 0f;
+   // private float GoalGlucose = 0f;
+   // private float SensitivityIndex = 0f;
     private float TotalGlucose = 0f;
 
     // carb calculation variables
     private float CarbsToIngest = 0f;
-    private float CarbControl = 0f;
+    //private float CarbControl = 0f;
     private float TotalCarb = 0f;
 
     // Total together 
@@ -25,11 +25,11 @@ public class Calculator : MonoBehaviour
 
     // Get set for everything
     public float getCurrentGlucose { get { return CurrentGlucose; } set { CurrentGlucose = value; } }
-    public float getGoalGlucose { get { return GoalGlucose; } set { GoalGlucose = value; } }
-    public float getSensitivityIndex { get { return SensitivityIndex; } set { SensitivityIndex = value; } }
+   // public float getGoalGlucose { get { return GoalGlucose; } set { GoalGlucose = value; } }
+   // public float getSensitivityIndex { get { return SensitivityIndex; } set { SensitivityIndex = value; } }
     public float getTotalGlucose { get { return TotalGlucose; } set { TotalGlucose = value; } }
     public float getCarbsToIngest { get { return CarbsToIngest; } set { CarbsToIngest = value; } }
-    public float getCarbControl { get { return CarbControl; }set { CarbControl = value; } }
+   // public float getCarbControl { get { return CarbControl; }set { CarbControl = value; } }
     public float getTotalCarb { get { return TotalCarb; } set { TotalCarb = value; } }
     public float getGaF { get { return GaF; }set { GaF = value; } }
     public static Calculator Instance
@@ -45,9 +45,7 @@ public class Calculator : MonoBehaviour
            return;
        }
        Instance = this;
-        GoalGlucose = SaveData.Instance.getGoalGlucose;
-        SensitivityIndex = SaveData.Instance.getSensitivityIndex;
-        CarbControl = SaveData.Instance.getCarbControl;
+        
     }
    
     // Rounding chart for rounding units. will change per person
@@ -85,8 +83,8 @@ public class Calculator : MonoBehaviour
     // Glucose only Calculation
     public void CalculateGlucose ()
     {
-        float temp = CurrentGlucose - GoalGlucose;
-        temp = temp / SensitivityIndex;
+        float temp = CurrentGlucose - SaveData.Instance.getGoalGlucose;
+        temp = temp / SaveData.Instance.getSensitivityIndex;
         temp = RoundUnits(temp);
         TotalGlucose = temp;
         // test
@@ -97,7 +95,7 @@ public class Calculator : MonoBehaviour
     // Food calculation Only
     public void CalcuateFood ()
     {
-        float temp = CarbsToIngest / CarbControl;
+        float temp = CarbsToIngest / SaveData.Instance.getCarbControl;
         temp = RoundUnits(temp);
         TotalCarb = temp;
         // test
@@ -111,9 +109,9 @@ public class Calculator : MonoBehaviour
         float tempG = 0f;
         float tempC = 0f;
         float total = 0f;
-        tempG = CurrentGlucose - GoalGlucose;
-        tempG = tempG / SensitivityIndex;
-        tempC = CarbsToIngest / CarbControl;
+        tempG = CurrentGlucose - SaveData.Instance.getGoalGlucose;
+        tempG = tempG / SaveData.Instance.getSensitivityIndex;
+        tempC = CarbsToIngest / SaveData.Instance.getCarbControl;
         total = tempC + tempG;
         total = RoundUnits(total);
         GaF = total;

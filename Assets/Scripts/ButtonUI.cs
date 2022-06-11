@@ -20,6 +20,7 @@ public class ButtonUI : MonoBehaviour
     public void GoToSettings()
     {
         SceneManager.LoadScene("Settings screen");
+        
     }
 
     public void LoadPreviousScene()
