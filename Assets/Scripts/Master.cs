@@ -47,7 +47,7 @@ public class Master : MonoBehaviour
         Debug.Log(s);
         mGoalGlucose = float.Parse(s);
         //Calculator.Instance.getGoalGlucose = mGoalGlucose;
-        SaveData.Instance.getGoalGlucose = mGoalGlucose;
+        SavePrefs.Instance.getGoalGlucose = mGoalGlucose;
         Debug.Log(mGoalGlucose.ToString());
        
     }
@@ -56,13 +56,13 @@ public class Master : MonoBehaviour
     {
         mSensitivityFactor = float.Parse(s);
         //Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
-        SaveData.Instance.getSensitivityIndex = mSensitivityFactor;
+        SavePrefs.Instance.getSensitivityIndex = mSensitivityFactor;
     }
     // sets Carb Control
     public void SetCarbControl(string s)
     {
         mCarbControl = float.Parse(s);
         //Calculator.Instance.getCarbControl = mCarbControl;
-        SaveData.Instance.getCarbControl = mCarbControl;
+        SavePrefs.Instance.getCarbControl = mCarbControl;
     }
 }

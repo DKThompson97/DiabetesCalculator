@@ -10,9 +10,9 @@ public class SettingsScreenText : MonoBehaviour
 
     public void Start()
     {
-        CurrentGlucoseText.text = $"Current Goal Glucose is: {SaveData.Instance.getGoalGlucose}";
-        CurrentSensitivityText.text = $"Current Sensitivity Index is: {SaveData.Instance.getSensitivityIndex}";
-        CurrentCarbText.text = $"Current Carb Control is: {SaveData.Instance.getCarbControl}";
+        CurrentGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
+        CurrentSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
+        CurrentCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
     }
     // Update is called once per frame
     void Update()
@@ -21,14 +21,14 @@ public class SettingsScreenText : MonoBehaviour
     }
     public void CurrentGText()
     {
-        CurrentGlucoseText.text = $"Current Goal Glucose is: {SaveData.Instance.getGoalGlucose}";
+        CurrentGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
     }
     public void CurrentSText()
     {
-        CurrentSensitivityText.text = $"Current Sensitivity Index is: {SaveData.Instance.getSensitivityIndex}";
+        CurrentSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
     }
     public void CurrentCText()
     {
-        CurrentCarbText.text = $"Current Carb Control is: {SaveData.Instance.getCarbControl}";
+        CurrentCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
     }
 }
