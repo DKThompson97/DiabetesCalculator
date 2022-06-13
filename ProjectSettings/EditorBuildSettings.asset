@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings screen.unity
     guid: a047b0fe505a85d42b69e0fcccacea27
+  - enabled: 1
+    path: Assets/Scenes/HelpfulLinksScene.unity
+    guid: bb73ab8e2bc036443b34557e1003464f
+  - enabled: 1
+    path: Assets/Scenes/EquationsScene.unity
+    guid: c1aeb3a8ff772404fa37e53eaadca601
   m_configObjects: {}
