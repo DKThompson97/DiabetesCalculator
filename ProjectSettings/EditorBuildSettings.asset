@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/HelpfulLinksScene.unity
     guid: bb73ab8e2bc036443b34557e1003464f
   - enabled: 1
-    path: Assets/Scenes/EquationsScene.unity
+    path: Assets/Scenes/Equations.unity
+    guid: b1e134ba3799f3d4fbdf76a48138b48a
+  - enabled: 1
+    path: Assets/Scenes/GlucoseEquation.unity
     guid: c1aeb3a8ff772404fa37e53eaadca601
+  - enabled: 1
+    path: Assets/Scenes/RoundingChart.unity
+    guid: bc55ee3cb461ebe468f3a92871aa99bf
+  - enabled: 1
+    path: Assets/Scenes/CarbEquation.unity
+    guid: 79a995d9c7feb844bb16a342328454f3
   m_configObjects: {}
