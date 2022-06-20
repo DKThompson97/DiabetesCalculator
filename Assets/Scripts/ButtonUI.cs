@@ -23,6 +23,27 @@ public class ButtonUI : MonoBehaviour
         
     }
 
+    public void GoToGlucoseEquation()
+    {
+        SceneManager.LoadScene("GlucoseEquation");
+    }
+
+    public void GoToEquations()
+    {
+        SceneManager.LoadScene("Equations");
+    }
+
+    public void GoToCarbEquation()
+    {
+        SceneManager.LoadScene("CarbEquation");
+    }
+
+    public void GoToRoundingChart()
+    {
+        SceneManager.LoadScene("RoundingChart");
+    }
+
+    
     public void LoadPreviousScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
