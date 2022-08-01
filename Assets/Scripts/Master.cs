@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Master : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Master : MonoBehaviour
     private float mSensitivityFactor = 0f;
     private float mCarbControl = 0f;
 
+    public TextMeshProUGUI clock; 
+    
     public float getGoalGlucose { get { return mGoalGlucose; } set { mGoalGlucose = value; } }
     public float getSensitivityIndex { get { return mSensitivityFactor; } set { mSensitivityFactor = value; } }
     public float getCarbControl { get { return mCarbControl; } set { mCarbControl = value; } }
@@ -19,6 +22,9 @@ public class Master : MonoBehaviour
         get;
         private set;
     }
+
+
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,19 +34,32 @@ public class Master : MonoBehaviour
         }
         Instance = this;
     }
-        // sets glucose input
-        public void readInputGlucose(string s)
+    private void Update()
+    {
+        string time = System.DateTime.Now.ToString("hh:mm") ;
+        clock.text = time;
+    }
+
+
+    // sets glucose input
+    public void readInputGlucose(string s)
     {
       
         mCurrentGlucose = float.Parse(s);
         Calculator.Instance.getCurrentGlucose = mCurrentGlucose;
     }
+   
+    
+    
     // sets carbs to ingest
     public void readInputCarbs(string s)
     {
         mCarbsToIngets = float.Parse(s);
         Calculator.Instance.getCarbsToIngest = mCarbsToIngets;
     }
+
+
+
     // sets Goal Glucose
     public void setGoalGlucose(string s)
     {
@@ -51,6 +70,9 @@ public class Master : MonoBehaviour
         Debug.Log(mGoalGlucose.ToString());
        
     }
+
+
+
     // sets Sensitivity Factor
     public void SetSensitivityFactor(string s)
     {
@@ -58,6 +80,9 @@ public class Master : MonoBehaviour
         //Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
         SavePrefs.Instance.getSensitivityIndex = mSensitivityFactor;
     }
+
+
+
     // sets Carb Control
     public void SetCarbControl(string s)
     {

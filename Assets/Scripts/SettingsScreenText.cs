@@ -8,6 +8,11 @@ public class SettingsScreenText : MonoBehaviour
     public Text CurrentSensitivityText;
     public Text CurrentCarbText;
 
+    private void Awake()
+    {
+        
+    }
+
     public void Start()
     {
         CurrentGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
