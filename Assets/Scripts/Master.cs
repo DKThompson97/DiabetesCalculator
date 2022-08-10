@@ -3,14 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Master : MonoBehaviour
 {
-    [SerializeField]private float mCurrentGlucose = 0f;
-    private float mCarbsToIngets = 0f;
-    private float mGoalGlucose = 0f;
-    private float mSensitivityFactor = 0f;
-    private float mCarbControl = 0f;
+    [SerializeField] private float mCurrentGlucose = 0f;
+    [SerializeField] private float mCarbsToIngets = 0f;
+    // Main settings
+    [SerializeField] private float mGoalGlucose = 0f;
+    [SerializeField] private float mSensitivityFactor = 0f;
+    [SerializeField] private float mCarbControl = 0f;
+    // Morning settings data
+    [SerializeField] private float morningGoalGlucose = 0f;
+    [SerializeField] private float morningSensitivityFactor = 0f;
+    [SerializeField] private float morningCarbControl = 0f;
+    // lunchtime settings data
+    [SerializeField] private float lunchGoalGlucose = 0f;
+    [SerializeField] private float lunchSensitivityFactor = 0f;
+    [SerializeField] private float lunchCarbControl = 0f;
+    // af6ternoon settings data
+    [SerializeField] private float afternoonGoalGlucose = 0f;
+    [SerializeField] private float afternoonSensitivityFactor = 0f;
+    [SerializeField] private float afternoonCarbControl = 0f;
+
+
 
     public TextMeshProUGUI clock; 
     
@@ -36,8 +52,35 @@ public class Master : MonoBehaviour
     }
     private void Update()
     {
-        string time = System.DateTime.Now.ToString("hh:mm") ;
-        clock.text = time;
+        DateTime morning = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 00, 01, 00);
+        DateTime lunch = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 10, 01, 00);
+        DateTime afternoon = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 14, 01, 00);
+
+        DateTime time = System.DateTime.Now;
+        clock.text = time.ToString("hh:mm");
+        if (time.CompareTo(morning) == 1 && time.CompareTo(lunch) == 0)
+        {
+            mGoalGlucose = morningGoalGlucose;
+            mSensitivityFactor = morningSensitivityFactor;
+            mCarbControl = morningCarbControl;
+            Debug.Log("using morning valuse");
+        }
+        if (time.CompareTo(lunch) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(afternoon) == 0)
+        {
+            mGoalGlucose = lunchGoalGlucose;
+            mSensitivityFactor = lunchSensitivityFactor;
+            mCarbControl = lunchCarbControl;
+            Debug.Log("using lunch valuse");
+        }
+        if (time.CompareTo(afternoon) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(lunch) == 1)
+        {
+            mGoalGlucose = afternoonGoalGlucose;
+            mSensitivityFactor = afternoonSensitivityFactor;
+            mCarbControl = afternoonCarbControl;
+            Debug.Log("using afternoon valuse");
+        }
+
+
     }
 
 
@@ -59,35 +102,118 @@ public class Master : MonoBehaviour
     }
 
 
-
-    // sets Goal Glucose
-    public void setGoalGlucose(string s)
+    #region Glucose setting functions
+    // sets All Goal Glucoses
+    public void setAllGoalGlucose(string s)
     {
-        Debug.Log(s);
-        mGoalGlucose = float.Parse(s);
-        //Calculator.Instance.getGoalGlucose = mGoalGlucose;
-        SavePrefs.Instance.getGoalGlucose = mGoalGlucose;
-        Debug.Log(mGoalGlucose.ToString());
-       
+        morningGoalGlucose = float.Parse(s);
+        lunchGoalGlucose = float.Parse (s);
+        afternoonGoalGlucose = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getGoalGlucose = morningGoalGlucose;
+        SavePrefs.Instance.getLGoalGlucose = lunchGoalGlucose;
+        SavePrefs.Instance.getAGoalGlucose = afternoonGoalGlucose;
     }
 
-
-
-    // sets Sensitivity Factor
-    public void SetSensitivityFactor(string s)
+    // Sets morning goal glucose
+    public void setMorningGoalGlucose(string s)
     {
-        mSensitivityFactor = float.Parse(s);
-        //Calculator.Instance.getSensitivityIndex = mSensitivityFactor;
-        SavePrefs.Instance.getSensitivityIndex = mSensitivityFactor;
+        morningGoalGlucose = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getGoalGlucose = morningGoalGlucose;
     }
 
-
-
-    // sets Carb Control
-    public void SetCarbControl(string s)
+    // Sets lunch goal glucose
+    public void setLunchGoalGlucose(string s)
     {
-        mCarbControl = float.Parse(s);
-        //Calculator.Instance.getCarbControl = mCarbControl;
-        SavePrefs.Instance.getCarbControl = mCarbControl;
+        lunchGoalGlucose = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getLGoalGlucose = lunchGoalGlucose;
     }
+
+    // Sets Afternoon goal glucose
+    public void setAfternoonGoalGlucose(string s)
+    {
+        afternoonGoalGlucose = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getAGoalGlucose = afternoonGoalGlucose;
+    }
+    #endregion
+
+    #region Sensitivity Factor setting functions
+    // sets all Sensitivity Factor
+    public void SetAllSensitivityFactor(string s)
+    {
+        morningSensitivityFactor = float.Parse(s);
+        lunchSensitivityFactor = float.Parse(s);
+        afternoonSensitivityFactor = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getSensitivityIndex = morningSensitivityFactor;
+        SavePrefs.Instance.getLSensitivityIndex = lunchSensitivityFactor;
+        SavePrefs.Instance.getASensitivityIndex = afternoonSensitivityFactor;
+    }
+
+    // Sets Morning Sensitivity Factor
+    public void SetmorningSensitivityFactor(string s)
+    {
+        morningSensitivityFactor = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getSensitivityIndex = morningSensitivityFactor;
+    }
+
+    // Sets lunch Sensitivity Factor
+    public void SetLunchSensitivityFactor(string s)
+    {
+        lunchSensitivityFactor = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getLSensitivityIndex = lunchSensitivityFactor;
+    }
+
+    // Sets afternoon Sensitivity Factor
+    public void SetAfternoonSensitivityFactor(string s)
+    {
+        afternoonSensitivityFactor = float.Parse(s);
+        // saves new settings
+        SavePrefs.Instance.getASensitivityIndex = afternoonSensitivityFactor;
+    }
+    #endregion
+
+    #region Carb Control Setting functions
+    // sets all Carb Control
+    public void SetAllCarbControl(string s)
+    {
+        morningCarbControl = float.Parse(s);
+        lunchCarbControl = float.Parse(s);
+        afternoonCarbControl = float.Parse(s);
+        // Saves new settings
+        SavePrefs.Instance.getCarbControl = morningCarbControl;
+        SavePrefs.Instance.getLCarbControl = lunchCarbControl;
+        SavePrefs.Instance.getACarbControl = afternoonCarbControl;
+    }
+
+    // Sets morning Carb Control
+    public void SetMorningCarbControl(string s)
+    {
+        morningCarbControl = float.Parse(s);
+        // Saves new settings
+        SavePrefs.Instance.getCarbControl = morningCarbControl;
+    }
+
+    // Sets lunch Carb Control
+    public void SetLunchCarbControl(string s)
+    {
+        lunchCarbControl = float.Parse(s);
+        // Saves new settings
+        SavePrefs.Instance.getLCarbControl = lunchCarbControl;
+    }
+
+    // Sets afternoon Carb Control'
+    public void SetAfternoonCarbControl(string s)
+    {
+        afternoonCarbControl = float.Parse(s);
+        // Saves new settings
+        SavePrefs.Instance.getACarbControl = afternoonCarbControl;
+    }
+    #endregion
+
 }

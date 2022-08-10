@@ -11,39 +11,6 @@ public class ButtonUI : MonoBehaviour
     {
         SceneManager.LoadScene("HomeScreen");
     }
-
-    public void GoToCalculator()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
-
-    public void GoToSettings()
-    {
-        SceneManager.LoadScene("Settings screen");
-        
-    }
-
-    public void GoToGlucoseEquation()
-    {
-        SceneManager.LoadScene("GlucoseEquation");
-    }
-
-    public void GoToEquations()
-    {
-        SceneManager.LoadScene("Equations");
-    }
-
-    public void GoToCarbEquation()
-    {
-        SceneManager.LoadScene("CarbEquation");
-    }
-
-    public void GoToRoundingChart()
-    {
-        SceneManager.LoadScene("RoundingChart");
-    }
-
-    
     public void LoadPreviousScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
