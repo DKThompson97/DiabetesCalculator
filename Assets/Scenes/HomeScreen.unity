@@ -727,6 +727,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -752,9 +755,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 117356587}
   - component: {fileID: 117356586}
   m_Layer: 5
-  m_Name: CurrentCarbControlText
+  m_Name: CurrentMorningCarbControlText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3014,8 +3014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012387}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0038795}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312305186
 MonoBehaviour:
@@ -3090,8 +3090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012387}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0038795}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313378783
 MonoBehaviour:
@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 324072230}
   - component: {fileID: 324072229}
   m_Layer: 5
-  m_Name: CurrentSensitivityFactorText
+  m_Name: CurrentMorningSensitivityFactorText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3726,8 +3726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.011436}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: 0.0098438}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367080734
 MonoBehaviour:
@@ -6260,8 +6260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012387}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0038795}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553864455
 MonoBehaviour:
@@ -6555,6 +6555,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -6580,9 +6583,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8684,6 +8684,9 @@ MonoBehaviour:
   CurrentGlucoseText: {fileID: 931478748}
   CurrentSensitivityText: {fileID: 1326139482}
   CurrentCarbText: {fileID: 1465403792}
+  CurrentMorningGlucoseText: {fileID: 1316136460}
+  CurrentMorningSensitivityText: {fileID: 324072229}
+  CurrentMorningCarbText: {fileID: 117356586}
   CurrentLunchGlucoseText: {fileID: 85930646}
   CurrentLunchSensitivityText: {fileID: 1760568046}
   CurrentLunchCarbText: {fileID: 676105901}
@@ -9140,6 +9143,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -9165,9 +9171,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9311,6 +9314,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -9336,9 +9342,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11628,7 +11631,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1962981353}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -11640,7 +11643,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1004452210
 MonoBehaviour:
@@ -12040,6 +12043,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -12065,9 +12071,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13729,6 +13732,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -13754,9 +13760,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13841,8 +13844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0094299}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0044041}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177903966
 MonoBehaviour:
@@ -15918,7 +15921,7 @@ GameObject:
   - component: {fileID: 1316136461}
   - component: {fileID: 1316136460}
   m_Layer: 5
-  m_Name: CurrentGoalGlucoseText
+  m_Name: CurrentMorningGoalGlucoseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16080,6 +16083,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -16105,9 +16111,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17001,8 +17004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012387}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0038795}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390234782
 MonoBehaviour:
@@ -17216,6 +17219,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -17241,9 +17247,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19532,8 +19535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.00010371}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: -0.0068951}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556900609
 MonoBehaviour:
@@ -20140,8 +20143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.011436}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: 0.0098438}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564626621
 MonoBehaviour:
@@ -20621,6 +20624,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -20646,9 +20652,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21289,6 +21292,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -21314,9 +21320,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21993,6 +21996,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -22018,9 +22024,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22371,8 +22374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.011436}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: 0.0098438}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675287317
 MonoBehaviour:
@@ -22941,6 +22944,9 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnDidEndEdit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 793800765}
         m_TargetAssemblyTypeName: Master, Assembly-CSharp
@@ -22966,9 +22972,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_OnDidEndEdit:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23782,8 +23785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.011569}
-  m_SizeDelta: {x: 800, y: 1603.7}
+  m_AnchoredPosition: {x: 0, y: 0.0098438}
+  m_SizeDelta: {x: 800, y: 1644.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892843931
 MonoBehaviour:

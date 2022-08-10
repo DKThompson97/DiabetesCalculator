@@ -39,7 +39,18 @@ public class Master : MonoBehaviour
         private set;
     }
 
-
+    private void Start()
+    {
+        morningGoalGlucose = SavePrefs.Instance.getGoalGlucose;
+        morningSensitivityFactor = SavePrefs.Instance.getSensitivityIndex;
+        morningCarbControl = SavePrefs.Instance.getCarbControl;
+        lunchGoalGlucose = SavePrefs.Instance.getLGoalGlucose;
+        lunchSensitivityFactor = SavePrefs.Instance.getLSensitivityIndex;
+        lunchCarbControl = SavePrefs.Instance.getLCarbControl;
+        afternoonGoalGlucose = SavePrefs.Instance.getAGoalGlucose;
+        afternoonSensitivityFactor = SavePrefs.Instance.getASensitivityIndex;
+        afternoonCarbControl = SavePrefs.Instance.getACarbControl;
+    }
 
     void Awake()
     {
@@ -52,20 +63,20 @@ public class Master : MonoBehaviour
     }
     private void Update()
     {
-        DateTime morning = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 00, 01, 00);
+        DateTime morning = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 01, 01, 00);
         DateTime lunch = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 10, 01, 00);
         DateTime afternoon = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 14, 01, 00);
 
         DateTime time = System.DateTime.Now;
         clock.text = time.ToString("hh:mm");
-        if (time.CompareTo(morning) == 1 && time.CompareTo(lunch) == 0)
+        if (time.CompareTo(morning) == 1 && time.CompareTo(lunch) == -1)
         {
             mGoalGlucose = morningGoalGlucose;
             mSensitivityFactor = morningSensitivityFactor;
             mCarbControl = morningCarbControl;
             Debug.Log("using morning valuse");
         }
-        if (time.CompareTo(lunch) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(afternoon) == 0)
+        if (time.CompareTo(lunch) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(afternoon) == -1)
         {
             mGoalGlucose = lunchGoalGlucose;
             mSensitivityFactor = lunchSensitivityFactor;
@@ -79,7 +90,7 @@ public class Master : MonoBehaviour
             mCarbControl = afternoonCarbControl;
             Debug.Log("using afternoon valuse");
         }
-
+        
 
     }
 
