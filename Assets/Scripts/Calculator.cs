@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Calculator : MonoBehaviour
 {
-
+    #region Variables
     // Variable for current Glucose
     private float CurrentGlucose = 0f;
 
@@ -24,7 +24,9 @@ public class Calculator : MonoBehaviour
 
     // Text to replace text feild in calculator scene
     public Text totalValueText;
+    #endregion
 
+    #region Get Set for Variables
     // Get set for everything
     // Get Set for current Glucose
     public float getCurrentGlucose { get { return CurrentGlucose; } set { CurrentGlucose = value; } }
@@ -40,8 +42,9 @@ public class Calculator : MonoBehaviour
 
     // Get set for total together // Needed??
     public float getGaF { get { return GaF; }set { GaF = value; } }
+    #endregion
 
-
+    #region Unity Methods
     // Create instance of Calc class
     public static Calculator Instance
     {
@@ -59,7 +62,9 @@ public class Calculator : MonoBehaviour
        Instance = this;
         
     }
-   
+    #endregion
+
+    #region Calculator Methods / Functionality
     // Rounding chart for rounding units. will change per person
     public float RoundUnits(float _input)
     {
@@ -81,37 +86,30 @@ public class Calculator : MonoBehaviour
         if (_input > 1)
         {
             temp2 = (int)Math.Truncate(_input);
-            Debug.Log(temp2.ToString());
             temp3 = _input - temp2;
             temp = RoundUnits(temp3);
             temp += temp2;
         }
         
-        Debug.Log(temp.ToString());
         return temp;
-        
     }
 
     // Glucose only Calculation
     public void CalculateGlucose ()
     {
-        float temp = CurrentGlucose - SavePrefs.Instance.getGoalGlucose;
-        temp = temp / SavePrefs.Instance.getSensitivityIndex;
+        float temp = CurrentGlucose - Master.Instance.getGoalGlucose;
+        temp = temp / Master.Instance.getSensitivityIndex;
         temp = RoundUnits(temp);
         TotalGlucose = temp;
-        // test
-        Debug.Log(TotalGlucose.ToString());
         totalValueText.text = $"You need {TotalGlucose} Units";
     }
 
     // Food calculation Only
     public void CalcuateFood ()
     {
-        float temp = CarbsToIngest / SavePrefs.Instance.getCarbControl;
+        float temp = CarbsToIngest / Master.Instance.getCarbControl;
         temp = RoundUnits(temp);
         TotalCarb = temp;
-        // test
-        Debug.Log(TotalCarb.ToString());
         totalValueText.text = $"You need {TotalCarb} Units";
     }
 
@@ -121,12 +119,13 @@ public class Calculator : MonoBehaviour
         float tempG = 0f;
         float tempC = 0f;
         float total = 0f;
-        tempG = CurrentGlucose - SavePrefs.Instance.getGoalGlucose;
-        tempG = tempG / SavePrefs.Instance.getSensitivityIndex;
-        tempC = CarbsToIngest / SavePrefs.Instance.getCarbControl;
+        tempG = CurrentGlucose - Master.Instance.getGoalGlucose;
+        tempG = tempG / Master.Instance.getSensitivityIndex;
+        tempC = CarbsToIngest / Master.Instance.getCarbControl;
         total = tempC + tempG;
         total = RoundUnits(total);
         GaF = total;
         totalValueText.text = $"You need {GaF} Units";
     }
+    #endregion
 }

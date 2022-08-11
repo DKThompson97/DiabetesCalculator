@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SavePrefs : MonoBehaviour
-{   // Morning
+{
+    #region Variables
+    // Morning
     [SerializeField] float SaveGoalGlucose;
     [SerializeField] float SaveSensitivityIndex;
-    [SerializeField] float SaveCarbControl;
+    [SerializeField] float SaveCarbControl; 
+
     //Lunch
     [SerializeField] float SaveLGoalGlucose;
     [SerializeField] float SaveLSensitivityIndex;
     [SerializeField] float SaveLCarbControl;
+
     //Afternoon
     [SerializeField] float SaveAGoalGlucose;
     [SerializeField] float SaveASensitivityIndex;
     [SerializeField] float SaveACarbControl;
+
     //string SaveUserName = "";
+    #endregion
 
-
+    #region Get Set for variables
     // Morning
     public float getGoalGlucose { get { return SaveGoalGlucose; } set { SaveGoalGlucose = value; } }
     public float getSensitivityIndex { get { return SaveSensitivityIndex; } set { SaveSensitivityIndex = value; } }
@@ -32,7 +38,13 @@ public class SavePrefs : MonoBehaviour
     public float getAGoalGlucose { get { return SaveAGoalGlucose; } set { SaveAGoalGlucose = value; } }
     public float getASensitivityIndex { get { return SaveASensitivityIndex; } set { SaveASensitivityIndex = value; } }
     public float getACarbControl { get { return SaveACarbControl; } set { SaveACarbControl = value; } }
+    #endregion
+
+    #region Unity Methods 
+
     public static SavePrefs Instance;
+
+    // creates an instance of the SavePrefs class and allows it not to be destroyed
     void Awake()
     {
         if (Instance == null)
@@ -47,14 +59,19 @@ public class SavePrefs : MonoBehaviour
         }
     }
 
+    // saves new settings on quit
     public void OnApplicationQuit()
     {
         SavePreferences();
     }
+
+    // saves new settings on pause
     public void OnApplicationPause(bool pause)
     {
         SavePreferences();
     }
+
+    // saves new settings on focus
     public void OnApplicationFocus(bool focus)
     {
         if (focus == false)
@@ -62,6 +79,10 @@ public class SavePrefs : MonoBehaviour
             SavePreferences();
         }
     }
+    #endregion
+
+    #region Save and load functions
+    // Saves all data when called
     public void SavePreferences()
     {
         // Morning
@@ -82,6 +103,7 @@ public class SavePrefs : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    // loads all saved data if no saved data starts off data as defaults
     public void LoadPreferences()
     {
         if (PlayerPrefs.HasKey("SavedGoalGlucose"))
@@ -121,12 +143,25 @@ public class SavePrefs : MonoBehaviour
         }
     }
 
+
+    // resets all data to defaults
     public void ResetPreferences()
     {
+        // resets all data to defaults
         PlayerPrefs.DeleteAll();
-        SaveGoalGlucose = 0f;
-        SaveSensitivityIndex = 0f;
-        SaveCarbControl = 0f;
+        //morning
+        SaveGoalGlucose = 120f;
+        SaveSensitivityIndex = 200f;
+        SaveCarbControl = 60f;
+        // Lunch
+        SaveLGoalGlucose = 120f;
+        SaveLSensitivityIndex = 200f;
+        SaveLCarbControl = 60f;
+        // Afternoon
+        SaveAGoalGlucose = 120f;
+        SaveASensitivityIndex = 200f;
+        SaveACarbControl = 60f;
         //SaveUserName = "User";
     }
+    #endregion
 }

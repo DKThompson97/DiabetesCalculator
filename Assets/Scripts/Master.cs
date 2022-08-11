@@ -7,6 +7,7 @@ using System;
 
 public class Master : MonoBehaviour
 {
+    #region Variables
     [SerializeField] private float mCurrentGlucose = 0f;
     [SerializeField] private float mCarbsToIngets = 0f;
     // Main settings
@@ -27,20 +28,28 @@ public class Master : MonoBehaviour
     [SerializeField] private float afternoonCarbControl = 0f;
 
 
+    // creates a text mesh pro to view live system time
+    public TextMeshProUGUI clock;
+    #endregion
 
-    public TextMeshProUGUI clock; 
-    
+    #region Get Set methods
+    // getter setter for the three rotating variables that will hold user settings for the correct time of day
     public float getGoalGlucose { get { return mGoalGlucose; } set { mGoalGlucose = value; } }
     public float getSensitivityIndex { get { return mSensitivityFactor; } set { mSensitivityFactor = value; } }
     public float getCarbControl { get { return mCarbControl; } set { mCarbControl = value; } }
+
+    // getter for instance of master class
     public static Master Instance
     {
         get;
         private set;
     }
+    #endregion
 
+    #region Unity Methods 
     private void Start()
     {
+        //uploads all saved settings to master from saved prefs
         morningGoalGlucose = SavePrefs.Instance.getGoalGlucose;
         morningSensitivityFactor = SavePrefs.Instance.getSensitivityIndex;
         morningCarbControl = SavePrefs.Instance.getCarbControl;
@@ -74,44 +83,43 @@ public class Master : MonoBehaviour
             mGoalGlucose = morningGoalGlucose;
             mSensitivityFactor = morningSensitivityFactor;
             mCarbControl = morningCarbControl;
-            Debug.Log("using morning valuse");
+            //Debug.Log("using morning valuse");  // For testing
         }
         if (time.CompareTo(lunch) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(afternoon) == -1)
         {
             mGoalGlucose = lunchGoalGlucose;
             mSensitivityFactor = lunchSensitivityFactor;
             mCarbControl = lunchCarbControl;
-            Debug.Log("using lunch valuse");
+            //Debug.Log("using lunch valuse"); // For testing
         }
         if (time.CompareTo(afternoon) == 1 && time.CompareTo(morning) == 1 && time.CompareTo(lunch) == 1)
         {
             mGoalGlucose = afternoonGoalGlucose;
             mSensitivityFactor = afternoonSensitivityFactor;
             mCarbControl = afternoonCarbControl;
-            Debug.Log("using afternoon valuse");
+            //Debug.Log("using afternoon valuse"); // For testing
         }
-        
-
     }
+    #endregion
 
-
+    #region Functions for reading user input on calculator screen
     // sets glucose input
     public void readInputGlucose(string s)
     {
-      
+      // sets current glucose in master and calculator scripts
         mCurrentGlucose = float.Parse(s);
         Calculator.Instance.getCurrentGlucose = mCurrentGlucose;
     }
-   
     
     
     // sets carbs to ingest
     public void readInputCarbs(string s)
     {
+        // sets carbs to ingest in master and calculator scripts
         mCarbsToIngets = float.Parse(s);
         Calculator.Instance.getCarbsToIngest = mCarbsToIngets;
     }
-
+    #endregion
 
     #region Glucose setting functions
     // sets All Goal Glucoses

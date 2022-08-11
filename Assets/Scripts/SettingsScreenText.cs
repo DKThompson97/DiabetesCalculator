@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SettingsScreenText : MonoBehaviour
 {
+    #region Variables 
     public Text CurrentGlucoseText;
     public Text CurrentSensitivityText;
     public Text CurrentCarbText;
@@ -16,22 +17,28 @@ public class SettingsScreenText : MonoBehaviour
     public Text CurrentAfternoonGlucoseText;
     public Text CurrentAfternoonSensitivityText;
     public Text CurrentAfternoonCarbText;
-    private void Awake()
-    {
-        
-    }
+    #endregion
 
+    #region Unity Methods
     public void Start()
     {
+        // sets all screen text based on saved data to correct numbers
         CurrentGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
         CurrentSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
         CurrentCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
+        CurrentMorningGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
+        CurrentMorningSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
+        CurrentMorningCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
+        CurrentLunchGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getLGoalGlucose}";
+        CurrentLunchSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getLSensitivityIndex}";
+        CurrentLunchCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getLCarbControl}";
+        CurrentAfternoonGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getAGoalGlucose}";
+        CurrentAfternoonSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getASensitivityIndex}";
+        CurrentAfternoonCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getACarbControl}";
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
+
+    #region Change morning and change all screen text
     // change all settings text & morning text
     public void CurrentGText()
     {
@@ -49,6 +56,9 @@ public class SettingsScreenText : MonoBehaviour
         CurrentCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
         CurrentMorningCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
     }
+    #endregion
+
+    #region Change lunch screen text
     //Lunch settings text
     public void CurrentLunchGText()
     {
@@ -62,6 +72,9 @@ public class SettingsScreenText : MonoBehaviour
     {
         CurrentLunchCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getLCarbControl}";
     }
+    #endregion
+
+    #region Change afternoon screen text
     // Afternoon settings text
     public void CurrentAfternoonGText()
     {
@@ -75,4 +88,5 @@ public class SettingsScreenText : MonoBehaviour
     {
         CurrentAfternoonCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getACarbControl}";
     }
+    #endregion
 }

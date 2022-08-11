@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
+    #region Button Methods
     public void GoToHomeScreen()
     {
         SceneManager.LoadScene("HomeScreen");
@@ -15,4 +16,5 @@ public class ButtonUI : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+    #endregion
 }
