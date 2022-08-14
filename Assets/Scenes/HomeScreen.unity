@@ -9161,7 +9161,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 793800763}
         m_TargetAssemblyTypeName: SettingsScreenText, Assembly-CSharp
-        m_MethodName: CurrentCText
+        m_MethodName: ChangeAllCText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12061,7 +12061,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 793800763}
         m_TargetAssemblyTypeName: SettingsScreenText, Assembly-CSharp
-        m_MethodName: CurrentGText
+        m_MethodName: ChangeAllGText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17237,7 +17237,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 793800763}
         m_TargetAssemblyTypeName: SettingsScreenText, Assembly-CSharp
-        m_MethodName: CurrentSText
+        m_MethodName: ChangeAllSText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

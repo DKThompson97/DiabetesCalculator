@@ -38,7 +38,38 @@ public class SettingsScreenText : MonoBehaviour
     }
     #endregion
 
-    #region Change morning and change all screen text
+    #region Change All Text, Morning, Lunch and dinner. 
+    // Used to change all screen text for morning lunch and dinner when the user, uses the change all screen to change all settings at once
+
+    // Changes all glucose texts on all settings pages
+    public void ChangeAllGText()
+    {
+        CurrentGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
+        CurrentMorningGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getGoalGlucose}";
+        CurrentLunchGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getLGoalGlucose}";
+        CurrentAfternoonGlucoseText.text = $"Current Goal Glucose is: {SavePrefs.Instance.getAGoalGlucose}";
+    }
+
+    // Changes all Sensitivity indexs on all settings pages
+    public void ChangeAllSText()
+    {
+        CurrentSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
+        CurrentMorningSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getSensitivityIndex}";
+        CurrentLunchSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getLSensitivityIndex}";
+        CurrentAfternoonSensitivityText.text = $"Current Sensitivity Index is: {SavePrefs.Instance.getASensitivityIndex}";
+    }
+
+    // Changes all Carb control text on all settings pages
+    public void ChangeAllCText()
+    {
+        CurrentCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
+        CurrentMorningCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getCarbControl}";
+        CurrentLunchCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getLCarbControl}";
+        CurrentAfternoonCarbText.text = $"Current Carb Control is: {SavePrefs.Instance.getACarbControl}";
+    }
+    #endregion
+
+    #region Change morning and change all screen text to show morning values as default
     // change all settings text & morning text
     public void CurrentGText()
     {
