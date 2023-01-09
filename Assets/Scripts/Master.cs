@@ -30,6 +30,8 @@ public class Master : MonoBehaviour
 
     // creates a text mesh pro to view live system time
     public TextMeshProUGUI clock;
+    public TextMeshProUGUI SettiongsClock;
+    public TextMeshProUGUI CalculatorClock;
     #endregion
 
     #region Get Set methods
@@ -78,6 +80,8 @@ public class Master : MonoBehaviour
 
         DateTime time = System.DateTime.Now;
         clock.text = time.ToString("hh:mm");
+        SettiongsClock.text = time.ToString("hh:mm");
+        CalculatorClock.text = time.ToString("hh:mm");
         if (time.CompareTo(morning) == 1 && time.CompareTo(lunch) == -1)
         {
             mGoalGlucose = morningGoalGlucose;

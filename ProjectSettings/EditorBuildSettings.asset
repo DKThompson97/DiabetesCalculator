@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Old Scenes/Settings screen.unity
     guid: a047b0fe505a85d42b69e0fcccacea27
   - enabled: 0
-    path: Assets/Scenes/HelpfulLinksScene.unity
+    path: Assets/Scenes/Old Scenes/HelpfulLinksScene.unity
     guid: bb73ab8e2bc036443b34557e1003464f
   - enabled: 0
     path: Assets/Scenes/Old Scenes/Equations.unity
