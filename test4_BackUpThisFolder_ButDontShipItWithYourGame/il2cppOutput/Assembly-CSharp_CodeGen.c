@@ -196,7 +196,13 @@ extern void SettingsScreenText_CurrentAfternoonSText_m355BB2756C4E8069BC576F40B8
 extern void SettingsScreenText_CurrentAfternoonCText_mE67974882703C3C3E63786D808341BB5873F815D (void);
 // 0x0000005C System.Void SettingsScreenText::.ctor()
 extern void SettingsScreenText__ctor_m8A1B7457018D1CFF61EFD7308466F496FB4D97BB (void);
-static Il2CppMethodPointer s_methodPointers[92] = 
+// 0x0000005D System.Void UserFactory::Start()
+extern void UserFactory_Start_m4474C9DA6CB23A8366391251E32AA54D110A404F (void);
+// 0x0000005E System.Void UserFactory::Update()
+extern void UserFactory_Update_m010434A0EFD109CB236F304246CF30D6BCAC322F (void);
+// 0x0000005F System.Void UserFactory::.ctor()
+extern void UserFactory__ctor_m4B598649A4F631EFB8A6B8403C4B5B9C4C1338C1 (void);
+static Il2CppMethodPointer s_methodPointers[95] = 
 {
 	ButtonUI_GoToHomeScreen_mA0134F6EE0E46E8E62D05DD214ACC7D222BE01C0,
 	ButtonUI_LoadPreviousScene_mB9927ECDCC5AC206FB528C19DD0A0655A33436CC,
@@ -290,8 +296,11 @@ static Il2CppMethodPointer s_methodPointers[92] =
 	SettingsScreenText_CurrentAfternoonSText_m355BB2756C4E8069BC576F40B8D95D7F2ED0D49E,
 	SettingsScreenText_CurrentAfternoonCText_mE67974882703C3C3E63786D808341BB5873F815D,
 	SettingsScreenText__ctor_m8A1B7457018D1CFF61EFD7308466F496FB4D97BB,
+	UserFactory_Start_m4474C9DA6CB23A8366391251E32AA54D110A404F,
+	UserFactory_Update_m010434A0EFD109CB236F304246CF30D6BCAC322F,
+	UserFactory__ctor_m4B598649A4F631EFB8A6B8403C4B5B9C4C1338C1,
 };
-static const int32_t s_InvokerIndices[92] = 
+static const int32_t s_InvokerIndices[95] = 
 {
 	3466,
 	3466,
@@ -385,12 +394,15 @@ static const int32_t s_InvokerIndices[92] =
 	3466,
 	3466,
 	3466,
+	3466,
+	3466,
+	3466,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	92,
+	95,
 	s_methodPointers,
 	0,
 	NULL,

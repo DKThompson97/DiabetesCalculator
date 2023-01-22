@@ -147,6 +147,8 @@ struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 // UnityEngine.Events.UnityAction
 struct UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7;
+// UserFactory
+struct UserFactory_t485DE314F0B3822D79D533856577DA1E6415ACF7;
 // UnityEngine.UI.VertexHelper
 struct VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE;
 // System.Void
@@ -1402,6 +1404,11 @@ struct SettingsScreenText_t60318AD4A3CB359AC1F3E16C92BCC2EC2B306960  : public Mo
 
 // UnityEngine.EventSystems.UIBehaviour
 struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
+// UserFactory
+struct UserFactory_t485DE314F0B3822D79D533856577DA1E6415ACF7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 };
 
@@ -5291,6 +5298,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingsScreenText_CurrentAfternoonCText
 }
 // System.Void SettingsScreenText::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingsScreenText__ctor_m8A1B7457018D1CFF61EFD7308466F496FB4D97BB (SettingsScreenText_t60318AD4A3CB359AC1F3E16C92BCC2EC2B306960* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UserFactory::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserFactory_Start_m4474C9DA6CB23A8366391251E32AA54D110A404F (UserFactory_t485DE314F0B3822D79D533856577DA1E6415ACF7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void UserFactory::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserFactory_Update_m010434A0EFD109CB236F304246CF30D6BCAC322F (UserFactory_t485DE314F0B3822D79D533856577DA1E6415ACF7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void UserFactory::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserFactory__ctor_m4B598649A4F631EFB8A6B8403C4B5B9C4C1338C1 (UserFactory_t485DE314F0B3822D79D533856577DA1E6415ACF7* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
