@@ -8,6 +8,10 @@ TagManager:
   - SettingsMorning
   - SettingsLunch
   - SettingsAfternoon
+  - ChangeAllSettings
+  - ChangeMorningSettings
+  - ChangeLunchSettings
+  - ChangeAfternoonSettings
   layers:
   - Default
   - TransparentFX

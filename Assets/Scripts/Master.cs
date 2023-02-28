@@ -27,6 +27,12 @@ public class Master : MonoBehaviour
     [SerializeField] private float afternoonSensitivityFactor = 0f;
     [SerializeField] private float afternoonCarbControl = 0f;
 
+    // Settings Canvas Toggles
+    public Toggle changAll;
+    public Toggle changeMorning;
+    public Toggle changeLunch;
+    public Toggle changeAfternoon;
+
 
     // creates a text mesh pro to view live system time
     public TextMeshProUGUI clock;
@@ -61,6 +67,12 @@ public class Master : MonoBehaviour
         afternoonGoalGlucose = SavePrefs.Instance.getAGoalGlucose;
         afternoonSensitivityFactor = SavePrefs.Instance.getASensitivityIndex;
         afternoonCarbControl = SavePrefs.Instance.getACarbControl;
+
+        // settings calculator scene set change all to on all others off
+        changAll.isOn = true;
+        changeMorning.isOn = false;
+        changeLunch.isOn = false;
+        changeAfternoon.isOn = false;
     }
 
     void Awake()
@@ -125,6 +137,69 @@ public class Master : MonoBehaviour
     }
     #endregion
 
+    #region Funcions for updating and reading user input on Calculator Settings Screen
+    // This will sort which functions to use based on user selection 
+    public void SetGlucose(string s)
+    {
+        if (changAll.isOn)
+        {
+            setAllGoalGlucose(s);
+        }
+        if (changeMorning.isOn)
+        {
+            setMorningGoalGlucose(s);
+        }
+        if (changeLunch.isOn)
+        {
+            setLunchGoalGlucose(s);
+        }
+        if (changeAfternoon.isOn)
+        {
+            setAfternoonGoalGlucose(s);
+        }
+    }
+
+    public void SetSensitivityFactor(string s)
+    {
+        if (changAll.isOn)
+        {
+            SetAllSensitivityFactor(s);
+        }
+        if (changeMorning.isOn)
+        {
+            SetmorningSensitivityFactor(s);
+        }
+        if (changeLunch.isOn)
+        {
+            SetLunchSensitivityFactor(s);
+        }
+        if (changeAfternoon.isOn)
+        {
+            SetAfternoonSensitivityFactor(s);
+        }
+    }
+
+    public void SetCarbControl(string s)
+    {
+        if (changAll.isOn)
+        {
+            SetAllCarbControl(s);
+        }
+        if (changeMorning.isOn)
+        {
+            SetMorningCarbControl(s);
+        }
+        if (changeLunch.isOn)
+        {
+            SetLunchCarbControl(s);
+        }
+        if (changeAfternoon.isOn)
+        {
+            SetAfternoonCarbControl(s);
+        }
+    }
+    #endregion
+
     #region Glucose setting functions
     // sets All Goal Glucoses
     public void setAllGoalGlucose(string s)
@@ -132,6 +207,8 @@ public class Master : MonoBehaviour
         morningGoalGlucose = float.Parse(s);
         lunchGoalGlucose = float.Parse (s);
         afternoonGoalGlucose = float.Parse(s);
+        // change text to match current 
+
         // saves new settings
         SavePrefs.Instance.getGoalGlucose = morningGoalGlucose;
         SavePrefs.Instance.getLGoalGlucose = lunchGoalGlucose;
