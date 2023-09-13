@@ -80,129 +80,135 @@ extern void Master_Update_mF483C65C5DD6DAFE78D5779392BC282BB9FAF8D0 (void);
 extern void Master_readInputGlucose_m610CE0C68436DC1520097561A1EEC15F50C24752 (void);
 // 0x00000022 System.Void Master::readInputCarbs(System.String)
 extern void Master_readInputCarbs_m7ED85D18F683A51ABB568F7F70C7ECBEAF137BB0 (void);
-// 0x00000023 System.Void Master::setAllGoalGlucose(System.String)
+// 0x00000023 System.Void Master::SetGlucose(System.String)
+extern void Master_SetGlucose_m4A52ACDB700F10DA1CDA6527D600B9EBBE5FDB9F (void);
+// 0x00000024 System.Void Master::SetSensitivityFactor(System.String)
+extern void Master_SetSensitivityFactor_m3D491ECAD2F8F2CADC0A9605A7AB352B588AC04E (void);
+// 0x00000025 System.Void Master::SetCarbControl(System.String)
+extern void Master_SetCarbControl_mA26CD8A0E089218EBA717893FF0AB5380AFA4B10 (void);
+// 0x00000026 System.Void Master::setAllGoalGlucose(System.String)
 extern void Master_setAllGoalGlucose_m0C2AFAF123F965F917FA86F6D2F356BA2A7D7C9A (void);
-// 0x00000024 System.Void Master::setMorningGoalGlucose(System.String)
+// 0x00000027 System.Void Master::setMorningGoalGlucose(System.String)
 extern void Master_setMorningGoalGlucose_m28AA0EF23CF7C0A2BEBED5D68A7578D9E6608F62 (void);
-// 0x00000025 System.Void Master::setLunchGoalGlucose(System.String)
+// 0x00000028 System.Void Master::setLunchGoalGlucose(System.String)
 extern void Master_setLunchGoalGlucose_m58B86E52FDEF076FF5E70BEB4FF8399F5096E868 (void);
-// 0x00000026 System.Void Master::setAfternoonGoalGlucose(System.String)
+// 0x00000029 System.Void Master::setAfternoonGoalGlucose(System.String)
 extern void Master_setAfternoonGoalGlucose_m07DF1EAED7F5057429A51C73D8B99291D5BC7404 (void);
-// 0x00000027 System.Void Master::SetAllSensitivityFactor(System.String)
+// 0x0000002A System.Void Master::SetAllSensitivityFactor(System.String)
 extern void Master_SetAllSensitivityFactor_mA643D02D8B2BBF037D076FE80B252679B92FE17A (void);
-// 0x00000028 System.Void Master::SetmorningSensitivityFactor(System.String)
+// 0x0000002B System.Void Master::SetmorningSensitivityFactor(System.String)
 extern void Master_SetmorningSensitivityFactor_mB6810CDDAC742A71707BF27FD293F633E853D036 (void);
-// 0x00000029 System.Void Master::SetLunchSensitivityFactor(System.String)
+// 0x0000002C System.Void Master::SetLunchSensitivityFactor(System.String)
 extern void Master_SetLunchSensitivityFactor_m70849208B39977732F29AB55B8FB4892CEB2217B (void);
-// 0x0000002A System.Void Master::SetAfternoonSensitivityFactor(System.String)
+// 0x0000002D System.Void Master::SetAfternoonSensitivityFactor(System.String)
 extern void Master_SetAfternoonSensitivityFactor_m1757B6CFBA9258F381CD0390619130C0C5676079 (void);
-// 0x0000002B System.Void Master::SetAllCarbControl(System.String)
+// 0x0000002E System.Void Master::SetAllCarbControl(System.String)
 extern void Master_SetAllCarbControl_m90AFD37E54E30DE41E8C78A0672748503E04BD5B (void);
-// 0x0000002C System.Void Master::SetMorningCarbControl(System.String)
+// 0x0000002F System.Void Master::SetMorningCarbControl(System.String)
 extern void Master_SetMorningCarbControl_m49E4676C0E49F7ABE2B165A84A08451FE6D9D59C (void);
-// 0x0000002D System.Void Master::SetLunchCarbControl(System.String)
+// 0x00000030 System.Void Master::SetLunchCarbControl(System.String)
 extern void Master_SetLunchCarbControl_mA9B8F2A9331735AC5CD0103BAE4A8763EF3A46C3 (void);
-// 0x0000002E System.Void Master::SetAfternoonCarbControl(System.String)
+// 0x00000031 System.Void Master::SetAfternoonCarbControl(System.String)
 extern void Master_SetAfternoonCarbControl_m91E3F13C76E50FB9B6615722D2AD6A6DA4DA7BD2 (void);
-// 0x0000002F System.Void Master::.ctor()
+// 0x00000032 System.Void Master::.ctor()
 extern void Master__ctor_mE67D685D0F1F2C33EF030728224A9C4785445508 (void);
-// 0x00000030 System.Void MenuMovement::Start()
+// 0x00000033 System.Void MenuMovement::Start()
 extern void MenuMovement_Start_m702C0E841E369C6F7D67C3FC7F0EC6202D4B1702 (void);
-// 0x00000031 System.Void MenuMovement::Update()
+// 0x00000034 System.Void MenuMovement::Update()
 extern void MenuMovement_Update_mE990C046E136727ACB57B5ABB875C13D75DA09EC (void);
-// 0x00000032 System.Void MenuMovement::MakeMenuVisable()
+// 0x00000035 System.Void MenuMovement::MakeMenuVisable()
 extern void MenuMovement_MakeMenuVisable_mFA0624A66A8F407E8F59F86848D6D4141C46190D (void);
-// 0x00000033 System.Void MenuMovement::MakeMenuNonVisable()
+// 0x00000036 System.Void MenuMovement::MakeMenuNonVisable()
 extern void MenuMovement_MakeMenuNonVisable_m54B813884F673B5C3B3E52A33BDDA6309712CB90 (void);
-// 0x00000034 System.Void MenuMovement::.ctor()
+// 0x00000037 System.Void MenuMovement::.ctor()
 extern void MenuMovement__ctor_mC455FE781084BDF4E0C9AA651882AD41928E694F (void);
-// 0x00000035 System.Single SavePrefs::get_getGoalGlucose()
+// 0x00000038 System.Single SavePrefs::get_getGoalGlucose()
 extern void SavePrefs_get_getGoalGlucose_m85592BD1974CCC074DF63BAF04BC6FC2F307FAE6 (void);
-// 0x00000036 System.Void SavePrefs::set_getGoalGlucose(System.Single)
+// 0x00000039 System.Void SavePrefs::set_getGoalGlucose(System.Single)
 extern void SavePrefs_set_getGoalGlucose_mF62BBBD318E05D85BBD5BB0DD4C8F793E9B47576 (void);
-// 0x00000037 System.Single SavePrefs::get_getSensitivityIndex()
+// 0x0000003A System.Single SavePrefs::get_getSensitivityIndex()
 extern void SavePrefs_get_getSensitivityIndex_mAD19253B7E3B12FE800AA33C32BF0B0878EA050C (void);
-// 0x00000038 System.Void SavePrefs::set_getSensitivityIndex(System.Single)
+// 0x0000003B System.Void SavePrefs::set_getSensitivityIndex(System.Single)
 extern void SavePrefs_set_getSensitivityIndex_m738B14B87076C1FF59F0A9CFBBBE9E7FB49F48BA (void);
-// 0x00000039 System.Single SavePrefs::get_getCarbControl()
+// 0x0000003C System.Single SavePrefs::get_getCarbControl()
 extern void SavePrefs_get_getCarbControl_m98C2E87312C9609FC438E814E29F905D0262F99F (void);
-// 0x0000003A System.Void SavePrefs::set_getCarbControl(System.Single)
+// 0x0000003D System.Void SavePrefs::set_getCarbControl(System.Single)
 extern void SavePrefs_set_getCarbControl_m03D8B952769997523BCC6E3D52B9883E110C008F (void);
-// 0x0000003B System.Single SavePrefs::get_getLGoalGlucose()
+// 0x0000003E System.Single SavePrefs::get_getLGoalGlucose()
 extern void SavePrefs_get_getLGoalGlucose_mAD7915B34CCB81554D3975BDE10A977F10C42327 (void);
-// 0x0000003C System.Void SavePrefs::set_getLGoalGlucose(System.Single)
+// 0x0000003F System.Void SavePrefs::set_getLGoalGlucose(System.Single)
 extern void SavePrefs_set_getLGoalGlucose_m32A368B6838F62E288CCEFAE8066945FD43C96D7 (void);
-// 0x0000003D System.Single SavePrefs::get_getLSensitivityIndex()
+// 0x00000040 System.Single SavePrefs::get_getLSensitivityIndex()
 extern void SavePrefs_get_getLSensitivityIndex_mE4854EA7CA48FC9F9AF7D28CD2C9F4F9DB090F1D (void);
-// 0x0000003E System.Void SavePrefs::set_getLSensitivityIndex(System.Single)
+// 0x00000041 System.Void SavePrefs::set_getLSensitivityIndex(System.Single)
 extern void SavePrefs_set_getLSensitivityIndex_m56F705ABA3D7048FC9E582BF46FE57383E3FBA0E (void);
-// 0x0000003F System.Single SavePrefs::get_getLCarbControl()
+// 0x00000042 System.Single SavePrefs::get_getLCarbControl()
 extern void SavePrefs_get_getLCarbControl_m8DA818EB774124AC853968C51A331A7377828652 (void);
-// 0x00000040 System.Void SavePrefs::set_getLCarbControl(System.Single)
+// 0x00000043 System.Void SavePrefs::set_getLCarbControl(System.Single)
 extern void SavePrefs_set_getLCarbControl_mE7BA997D13F4108564924610A685D3CB49358F25 (void);
-// 0x00000041 System.Single SavePrefs::get_getAGoalGlucose()
+// 0x00000044 System.Single SavePrefs::get_getAGoalGlucose()
 extern void SavePrefs_get_getAGoalGlucose_m823DA0590163534C7A04DEA6850062696A9E3CAF (void);
-// 0x00000042 System.Void SavePrefs::set_getAGoalGlucose(System.Single)
+// 0x00000045 System.Void SavePrefs::set_getAGoalGlucose(System.Single)
 extern void SavePrefs_set_getAGoalGlucose_m214E238A6B78D5DDF4844AEF7584FF942222DD83 (void);
-// 0x00000043 System.Single SavePrefs::get_getASensitivityIndex()
+// 0x00000046 System.Single SavePrefs::get_getASensitivityIndex()
 extern void SavePrefs_get_getASensitivityIndex_m4A2A8050A99037941C8879F5D4799420C91F22A5 (void);
-// 0x00000044 System.Void SavePrefs::set_getASensitivityIndex(System.Single)
+// 0x00000047 System.Void SavePrefs::set_getASensitivityIndex(System.Single)
 extern void SavePrefs_set_getASensitivityIndex_m6C63BD65BE67A6AB7A638948656C3A3401489055 (void);
-// 0x00000045 System.Single SavePrefs::get_getACarbControl()
+// 0x00000048 System.Single SavePrefs::get_getACarbControl()
 extern void SavePrefs_get_getACarbControl_mC2402CBC681FFF68D8459530E231AC5573B43F90 (void);
-// 0x00000046 System.Void SavePrefs::set_getACarbControl(System.Single)
+// 0x00000049 System.Void SavePrefs::set_getACarbControl(System.Single)
 extern void SavePrefs_set_getACarbControl_m25E8C12D7A5F17A89B062CAAC3B3A449EB2D1661 (void);
-// 0x00000047 System.Void SavePrefs::Awake()
+// 0x0000004A System.Void SavePrefs::Awake()
 extern void SavePrefs_Awake_mD68A305CF92CB51531805206B013AE90A4ADA400 (void);
-// 0x00000048 System.Void SavePrefs::OnApplicationQuit()
+// 0x0000004B System.Void SavePrefs::OnApplicationQuit()
 extern void SavePrefs_OnApplicationQuit_mC9E338C460AA6F9DD1626E416D2B539CED6EE2C4 (void);
-// 0x00000049 System.Void SavePrefs::OnApplicationPause(System.Boolean)
+// 0x0000004C System.Void SavePrefs::OnApplicationPause(System.Boolean)
 extern void SavePrefs_OnApplicationPause_m3C0D51CA5154EED36DF449F1900C9E1EC9420417 (void);
-// 0x0000004A System.Void SavePrefs::OnApplicationFocus(System.Boolean)
+// 0x0000004D System.Void SavePrefs::OnApplicationFocus(System.Boolean)
 extern void SavePrefs_OnApplicationFocus_m47ED72A675CDE2FC4CD10ED1DF6AF9D08FBA8391 (void);
-// 0x0000004B System.Void SavePrefs::SavePreferences()
+// 0x0000004E System.Void SavePrefs::SavePreferences()
 extern void SavePrefs_SavePreferences_m8F0757AB0EB53A497A0D4B508E417330754561A2 (void);
-// 0x0000004C System.Void SavePrefs::LoadPreferences()
+// 0x0000004F System.Void SavePrefs::LoadPreferences()
 extern void SavePrefs_LoadPreferences_m3594B58BEE4A84C3CDB95E1CDD8CB85139586019 (void);
-// 0x0000004D System.Void SavePrefs::ResetPreferences()
+// 0x00000050 System.Void SavePrefs::ResetPreferences()
 extern void SavePrefs_ResetPreferences_mAAD4F3CE11B19320492C804A517FD117A6E2A166 (void);
-// 0x0000004E System.Void SavePrefs::.ctor()
+// 0x00000051 System.Void SavePrefs::.ctor()
 extern void SavePrefs__ctor_m65432760B31D1F3A8961659E756FF7B1E0AD1DD4 (void);
-// 0x0000004F System.Void SettingsScreenText::Start()
+// 0x00000052 System.Void SettingsScreenText::Start()
 extern void SettingsScreenText_Start_mF53AFAE521DAD8F735D368521187AADECA7AADA0 (void);
-// 0x00000050 System.Void SettingsScreenText::ChangeAllGText()
+// 0x00000053 System.Void SettingsScreenText::ChangeAllGText()
 extern void SettingsScreenText_ChangeAllGText_mC9E01217315831151228EA70A8F3463035F94C2C (void);
-// 0x00000051 System.Void SettingsScreenText::ChangeAllSText()
+// 0x00000054 System.Void SettingsScreenText::ChangeAllSText()
 extern void SettingsScreenText_ChangeAllSText_m789C6A31A30E99418ACA7E1E47A027D9D9A319FB (void);
-// 0x00000052 System.Void SettingsScreenText::ChangeAllCText()
+// 0x00000055 System.Void SettingsScreenText::ChangeAllCText()
 extern void SettingsScreenText_ChangeAllCText_m4D966F5AD678ADEE8560FE4277186F8D358764BE (void);
-// 0x00000053 System.Void SettingsScreenText::CurrentGText()
+// 0x00000056 System.Void SettingsScreenText::CurrentGText()
 extern void SettingsScreenText_CurrentGText_mF1C2F79F0F73456CF8077138BD98F51EB0A37426 (void);
-// 0x00000054 System.Void SettingsScreenText::CurrentSText()
+// 0x00000057 System.Void SettingsScreenText::CurrentSText()
 extern void SettingsScreenText_CurrentSText_m494F61088C297EB43A9E5801EBBD448919FAAAFE (void);
-// 0x00000055 System.Void SettingsScreenText::CurrentCText()
+// 0x00000058 System.Void SettingsScreenText::CurrentCText()
 extern void SettingsScreenText_CurrentCText_mB6366B28B7472D6DD6CC0429C110BF9CA6C65364 (void);
-// 0x00000056 System.Void SettingsScreenText::CurrentLunchGText()
+// 0x00000059 System.Void SettingsScreenText::CurrentLunchGText()
 extern void SettingsScreenText_CurrentLunchGText_m5C777127235CCCB2F1C28369B0EC68CAFD494076 (void);
-// 0x00000057 System.Void SettingsScreenText::CurrentLunchSText()
+// 0x0000005A System.Void SettingsScreenText::CurrentLunchSText()
 extern void SettingsScreenText_CurrentLunchSText_m194367C61542A4A19EE6762F082CAD184A2E32E8 (void);
-// 0x00000058 System.Void SettingsScreenText::CurrentLunchCText()
+// 0x0000005B System.Void SettingsScreenText::CurrentLunchCText()
 extern void SettingsScreenText_CurrentLunchCText_mCD44A68F999A1ACF6B55A28831863CFCC667BF80 (void);
-// 0x00000059 System.Void SettingsScreenText::CurrentAfternoonGText()
+// 0x0000005C System.Void SettingsScreenText::CurrentAfternoonGText()
 extern void SettingsScreenText_CurrentAfternoonGText_m82EAFD32832D2921DE168ECF88C1E16459BC16D2 (void);
-// 0x0000005A System.Void SettingsScreenText::CurrentAfternoonSText()
+// 0x0000005D System.Void SettingsScreenText::CurrentAfternoonSText()
 extern void SettingsScreenText_CurrentAfternoonSText_m355BB2756C4E8069BC576F40B8D95D7F2ED0D49E (void);
-// 0x0000005B System.Void SettingsScreenText::CurrentAfternoonCText()
+// 0x0000005E System.Void SettingsScreenText::CurrentAfternoonCText()
 extern void SettingsScreenText_CurrentAfternoonCText_mE67974882703C3C3E63786D808341BB5873F815D (void);
-// 0x0000005C System.Void SettingsScreenText::.ctor()
+// 0x0000005F System.Void SettingsScreenText::.ctor()
 extern void SettingsScreenText__ctor_m8A1B7457018D1CFF61EFD7308466F496FB4D97BB (void);
-// 0x0000005D System.Void UserFactory::Start()
+// 0x00000060 System.Void UserFactory::Start()
 extern void UserFactory_Start_m4474C9DA6CB23A8366391251E32AA54D110A404F (void);
-// 0x0000005E System.Void UserFactory::Update()
+// 0x00000061 System.Void UserFactory::Update()
 extern void UserFactory_Update_m010434A0EFD109CB236F304246CF30D6BCAC322F (void);
-// 0x0000005F System.Void UserFactory::.ctor()
+// 0x00000062 System.Void UserFactory::.ctor()
 extern void UserFactory__ctor_m4B598649A4F631EFB8A6B8403C4B5B9C4C1338C1 (void);
-static Il2CppMethodPointer s_methodPointers[95] = 
+static Il2CppMethodPointer s_methodPointers[98] = 
 {
 	ButtonUI_GoToHomeScreen_mA0134F6EE0E46E8E62D05DD214ACC7D222BE01C0,
 	ButtonUI_LoadPreviousScene_mB9927ECDCC5AC206FB528C19DD0A0655A33436CC,
@@ -238,6 +244,9 @@ static Il2CppMethodPointer s_methodPointers[95] =
 	Master_Update_mF483C65C5DD6DAFE78D5779392BC282BB9FAF8D0,
 	Master_readInputGlucose_m610CE0C68436DC1520097561A1EEC15F50C24752,
 	Master_readInputCarbs_m7ED85D18F683A51ABB568F7F70C7ECBEAF137BB0,
+	Master_SetGlucose_m4A52ACDB700F10DA1CDA6527D600B9EBBE5FDB9F,
+	Master_SetSensitivityFactor_m3D491ECAD2F8F2CADC0A9605A7AB352B588AC04E,
+	Master_SetCarbControl_mA26CD8A0E089218EBA717893FF0AB5380AFA4B10,
 	Master_setAllGoalGlucose_m0C2AFAF123F965F917FA86F6D2F356BA2A7D7C9A,
 	Master_setMorningGoalGlucose_m28AA0EF23CF7C0A2BEBED5D68A7578D9E6608F62,
 	Master_setLunchGoalGlucose_m58B86E52FDEF076FF5E70BEB4FF8399F5096E868,
@@ -300,7 +309,7 @@ static Il2CppMethodPointer s_methodPointers[95] =
 	UserFactory_Update_m010434A0EFD109CB236F304246CF30D6BCAC322F,
 	UserFactory__ctor_m4B598649A4F631EFB8A6B8403C4B5B9C4C1338C1,
 };
-static const int32_t s_InvokerIndices[95] = 
+static const int32_t s_InvokerIndices[98] = 
 {
 	3466,
 	3466,
@@ -334,6 +343,9 @@ static const int32_t s_InvokerIndices[95] =
 	3466,
 	3466,
 	3466,
+	2809,
+	2809,
+	2809,
 	2809,
 	2809,
 	2809,
@@ -402,7 +414,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	95,
+	98,
 	s_methodPointers,
 	0,
 	NULL,

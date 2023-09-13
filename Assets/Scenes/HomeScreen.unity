@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 793800766}
+      - m_Target: {fileID: 793800768}
         m_TargetAssemblyTypeName: Calculator, Assembly-CSharp
         m_MethodName: CalculateBoth
         m_Mode: 1
@@ -5421,7 +5421,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 453872336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 969473895}
+        m_TargetAssemblyTypeName: MenuMovement, Assembly-CSharp
+        m_MethodName: MakeMenuVisable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &453872336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7215,8 +7227,8 @@ GameObject:
   - component: {fileID: 793800762}
   - component: {fileID: 793800763}
   - component: {fileID: 793800765}
-  - component: {fileID: 793800766}
   - component: {fileID: 793800767}
+  - component: {fileID: 793800768}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -7308,19 +7320,6 @@ MonoBehaviour:
   clock: {fileID: 2616191}
   SettiongsClock: {fileID: 1125009016}
   CalculatorClock: {fileID: 1667677461}
---- !u!114 &793800766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793800761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1faedb9eb3d52e544be3f7b97998b61f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalValueText: {fileID: 870978382}
 --- !u!114 &793800767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7334,6 +7333,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &793800768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793800761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1faedb9eb3d52e544be3f7b97998b61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalValueText: {fileID: 870978382}
 --- !u!1 &794825948
 GameObject:
   m_ObjectHideFlags: 0
@@ -8173,7 +8185,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 80
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 8
     m_MaxSize: 80
     m_Alignment: 4
@@ -8553,7 +8565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517364581515416388, guid: 5e96befc0c6f38b40a5c3be434bd01a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1928770480553769122, guid: 5e96befc0c6f38b40a5c3be434bd01a4, type: 3}
       propertyPath: m_RootOrder
@@ -8690,7 +8702,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 793800766}
+      - m_Target: {fileID: 793800768}
         m_TargetAssemblyTypeName: Calculator, Assembly-CSharp
         m_MethodName: CalcuateFood
         m_Mode: 1
@@ -11330,7 +11342,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 793800766}
+      - m_Target: {fileID: 793800768}
         m_TargetAssemblyTypeName: Calculator, Assembly-CSharp
         m_MethodName: CalculateGlucose
         m_Mode: 1
@@ -12736,7 +12748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1370350751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15671,8 +15683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -452}
-  m_SizeDelta: {x: 600, y: 120}
+  m_AnchoredPosition: {x: 0, y: -450.45105}
+  m_SizeDelta: {x: 600, y: 116.9022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667247552
 MonoBehaviour:
