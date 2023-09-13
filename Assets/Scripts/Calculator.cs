@@ -23,7 +23,7 @@ public class Calculator : MonoBehaviour
     private float GaF = 0f;
 
     // Text to replace text feild in calculator scene
-    [SerializeField] public Text totalValueText;
+    [SerializeField] Text totalValueText;
     #endregion
 
     #region Get Set for Variables
@@ -102,7 +102,6 @@ public class Calculator : MonoBehaviour
         temp = RoundUnits(temp);
         TotalGlucose = temp;
         totalValueText.text = $"You need {TotalGlucose} Units";
-        Debug.Log(TotalGlucose);
     }
 
     // Food calculation Only
@@ -112,7 +111,6 @@ public class Calculator : MonoBehaviour
         temp = RoundUnits(temp);
         TotalCarb = temp;
         totalValueText.text = $"You need {TotalCarb} Units";
-       Debug.Log(TotalCarb);
     }
 
     // Food + Glucose Calculation
@@ -128,7 +126,6 @@ public class Calculator : MonoBehaviour
         total = RoundUnits(total);
         GaF = total;
         totalValueText.text = $"You need {GaF} Units";
-        Debug.Log(GaF);
     }
     #endregion
 }
